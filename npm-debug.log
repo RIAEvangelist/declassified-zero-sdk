@@ -1,0 +1,225 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'socketcan' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 silly cache add args [ 'socketcan', null ]
+5 verbose cache add spec socketcan
+6 silly cache add parsed spec { raw: 'socketcan',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'socketcan',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed socketcan@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'socketcan', range: '*', hasData: false }
+11 silly mapToRegistry name socketcan
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/socketcan
+15 verbose addNameRange registry:https://registry.npmjs.org/socketcan not in flight; fetching
+16 verbose get https://registry.npmjs.org/socketcan not expired, no request
+17 silly addNameRange number 2 { name: 'socketcan', range: '*', hasData: true }
+18 silly addNameRange versions [ 'socketcan',
+18 silly addNameRange   [ '1.2.3-test.0',
+18 silly addNameRange     '2.0.0',
+18 silly addNameRange     '1.0.0',
+18 silly addNameRange     '1.0.1',
+18 silly addNameRange     '1.0.2',
+18 silly addNameRange     '1.0.3',
+18 silly addNameRange     '1.0.4',
+18 silly addNameRange     '1.0.5',
+18 silly addNameRange     '1.0.6',
+18 silly addNameRange     '1.1.0',
+18 silly addNameRange     '1.1.1',
+18 silly addNameRange     '1.2.0',
+18 silly addNameRange     '1.2.1',
+18 silly addNameRange     '1.2.2',
+18 silly addNameRange     '1.2.3',
+18 silly addNameRange     '2.0.1' ] ]
+19 verbose addNamed socketcan@2.0.1
+20 silly addNamed semver.valid 2.0.1
+21 silly addNamed semver.validRange 2.0.1
+22 silly cache afterAdd socketcan@2.0.1
+23 verbose afterAdd /home/bmiller/.npm/socketcan/2.0.1/package/package.json not in flight; writing
+24 verbose afterAdd /home/bmiller/.npm/socketcan/2.0.1/package/package.json written
+25 silly install resolved [ { name: 'socketcan',
+25 silly install resolved     author:
+25 silly install resolved      { name: 'Sebastian Haas',
+25 silly install resolved        email: 'sebastian@sebastianhaas.info' },
+25 silly install resolved     description: 'A SocketCAN abstraction layer for NodeJS.',
+25 silly install resolved     version: '2.0.1',
+25 silly install resolved     repository: { type: 'git', url: 'git://github.com/sebi2k1/node-can.git' },
+25 silly install resolved     scripts:
+25 silly install resolved      { preinstall: 'node-gyp configure && node-gyp build',
+25 silly install resolved        preuninstall: 'rm -rf build/*' },
+25 silly install resolved     dependencies: { xml2js: '>=0.2.0' },
+25 silly install resolved     main: 'socketcan.js',
+25 silly install resolved     os: [ 'linux' ],
+25 silly install resolved     gitHead: 'dd0ccc639abdbe5ec63b7b809a239fb9ea31e448',
+25 silly install resolved     bugs: { url: 'https://github.com/sebi2k1/node-can/issues' },
+25 silly install resolved     homepage: 'https://github.com/sebi2k1/node-can',
+25 silly install resolved     _id: 'socketcan@2.0.1',
+25 silly install resolved     _shasum: '2d2a578105b981bda0f1bbec87ab85d42380b215',
+25 silly install resolved     _from: 'socketcan@*',
+25 silly install resolved     _npmVersion: '1.4.28',
+25 silly install resolved     _npmUser: { name: 'sebi2k1', email: 'sebastian@sebastianhaas.info' },
+25 silly install resolved     maintainers: [ [Object], [Object] ],
+25 silly install resolved     dist:
+25 silly install resolved      { shasum: '2d2a578105b981bda0f1bbec87ab85d42380b215',
+25 silly install resolved        tarball: 'http://registry.npmjs.org/socketcan/-/socketcan-2.0.1.tgz' },
+25 silly install resolved     directories: {},
+25 silly install resolved     _resolved: 'https://registry.npmjs.org/socketcan/-/socketcan-2.0.1.tgz',
+25 silly install resolved     readme: 'ERROR: No README data found!' } ]
+26 info install socketcan@2.0.1 into /usr/local/lib
+27 info installOne socketcan@2.0.1
+28 verbose installOne of socketcan to /usr/local/lib not in flight; installing
+29 verbose lock using /home/bmiller/.npm/_locks/socketcan-e61a0d85344e1337.lock for /usr/local/lib/node_modules/socketcan
+30 silly install write writing socketcan 2.0.1 to /usr/local/lib/node_modules/socketcan
+31 silly cache addNamed cb socketcan@2.0.1
+32 verbose unbuild lib/node_modules/socketcan
+33 silly gentlyRm /usr/local/lib/node_modules/socketcan is being purged from base /usr/local
+34 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/socketcan
+35 verbose tar unpack /home/bmiller/.npm/socketcan/2.0.1/package.tgz
+36 verbose tar unpacking to /usr/local/lib/node_modules/socketcan
+37 silly gentlyRm /usr/local/lib/node_modules/socketcan is being purged
+38 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/socketcan
+39 silly gunzTarPerm modes [ '755', '644' ]
+40 silly gunzTarPerm extractEntry package.json
+41 silly gunzTarPerm extractEntry .npmignore
+42 silly gunzTarPerm extractEntry README.md
+43 silly gunzTarPerm extractEntry parse_kcd.js
+44 silly gunzTarPerm modified mode [ 'parse_kcd.js', 436, 420 ]
+45 silly gunzTarPerm extractEntry socketcan.js
+46 silly gunzTarPerm modified mode [ 'socketcan.js', 436, 420 ]
+47 silly gunzTarPerm extractEntry binding.gyp
+48 silly gunzTarPerm modified mode [ 'binding.gyp', 436, 420 ]
+49 silly gunzTarPerm extractEntry build_docs.sh
+50 silly gunzTarPerm modified mode [ 'build_docs.sh', 509, 493 ]
+51 silly gunzTarPerm extractEntry docs/api.js
+52 silly gunzTarPerm modified mode [ 'docs/api.js', 436, 420 ]
+53 silly gunzTarPerm extractEntry docs/assets/css/external-small.png
+54 silly gunzTarPerm modified mode [ 'docs/assets/css/external-small.png', 436, 420 ]
+55 silly gunzTarPerm extractEntry docs/assets/css/logo.png
+56 silly gunzTarPerm modified mode [ 'docs/assets/css/logo.png', 436, 420 ]
+57 silly gunzTarPerm extractEntry docs/assets/css/main.css
+58 silly gunzTarPerm modified mode [ 'docs/assets/css/main.css', 436, 420 ]
+59 silly gunzTarPerm extractEntry docs/assets/favicon.png
+60 silly gunzTarPerm modified mode [ 'docs/assets/favicon.png', 436, 420 ]
+61 silly gunzTarPerm extractEntry docs/assets/img/spinner.gif
+62 silly gunzTarPerm modified mode [ 'docs/assets/img/spinner.gif', 436, 420 ]
+63 silly gunzTarPerm extractEntry docs/assets/index.html
+64 silly gunzTarPerm modified mode [ 'docs/assets/index.html', 436, 420 ]
+65 silly gunzTarPerm extractEntry docs/assets/js/api-filter.js
+66 silly gunzTarPerm modified mode [ 'docs/assets/js/api-filter.js', 436, 420 ]
+67 silly gunzTarPerm extractEntry docs/assets/js/api-list.js
+68 silly gunzTarPerm modified mode [ 'docs/assets/js/api-list.js', 436, 420 ]
+69 silly gunzTarPerm extractEntry docs/assets/js/api-search.js
+70 silly gunzTarPerm modified mode [ 'docs/assets/js/api-search.js', 436, 420 ]
+71 silly gunzTarPerm extractEntry docs/assets/js/apidocs.js
+72 silly gunzTarPerm modified mode [ 'docs/assets/js/apidocs.js', 436, 420 ]
+73 silly gunzTarPerm extractEntry docs/assets/js/yui-prettify.js
+74 silly gunzTarPerm modified mode [ 'docs/assets/js/yui-prettify.js', 436, 420 ]
+75 silly gunzTarPerm extractEntry docs/assets/vendor/prettify/prettify-min.js
+76 silly gunzTarPerm modified mode [ 'docs/assets/vendor/prettify/prettify-min.js', 436, 420 ]
+77 silly gunzTarPerm extractEntry docs/assets/vendor/prettify/CHANGES.html
+78 silly gunzTarPerm modified mode [ 'docs/assets/vendor/prettify/CHANGES.html', 436, 420 ]
+79 silly gunzTarPerm extractEntry docs/assets/vendor/prettify/COPYING
+80 silly gunzTarPerm modified mode [ 'docs/assets/vendor/prettify/COPYING', 436, 420 ]
+81 silly gunzTarPerm extractEntry docs/assets/vendor/prettify/README.html
+82 silly gunzTarPerm modified mode [ 'docs/assets/vendor/prettify/README.html', 436, 420 ]
+83 silly gunzTarPerm extractEntry docs/assets/vendor/prettify/prettify-min.css
+84 silly gunzTarPerm modified mode [ 'docs/assets/vendor/prettify/prettify-min.css', 436, 420 ]
+85 silly gunzTarPerm extractEntry docs/classes/DatabaseService.html
+86 silly gunzTarPerm modified mode [ 'docs/classes/DatabaseService.html', 436, 420 ]
+87 silly gunzTarPerm extractEntry docs/classes/Message.html
+88 silly gunzTarPerm modified mode [ 'docs/classes/Message.html', 436, 420 ]
+89 silly gunzTarPerm extractEntry docs/classes/RawChannel.html
+90 silly gunzTarPerm modified mode [ 'docs/classes/RawChannel.html', 436, 420 ]
+91 silly gunzTarPerm extractEntry docs/classes/Signal.html
+92 silly gunzTarPerm modified mode [ 'docs/classes/Signal.html', 436, 420 ]
+93 silly gunzTarPerm extractEntry docs/classes/exports.html
+94 silly gunzTarPerm modified mode [ 'docs/classes/exports.html', 436, 420 ]
+95 silly gunzTarPerm extractEntry docs/classes/index.html
+96 silly gunzTarPerm modified mode [ 'docs/classes/index.html', 436, 420 ]
+97 silly gunzTarPerm extractEntry docs/data.json
+98 silly gunzTarPerm modified mode [ 'docs/data.json', 436, 420 ]
+99 silly gunzTarPerm extractEntry docs/files/can.js.html
+100 silly gunzTarPerm modified mode [ 'docs/files/can.js.html', 436, 420 ]
+101 silly gunzTarPerm extractEntry docs/files/index.html
+102 silly gunzTarPerm modified mode [ 'docs/files/index.html', 436, 420 ]
+103 silly gunzTarPerm extractEntry docs/files/src_raw.h.html
+104 silly gunzTarPerm modified mode [ 'docs/files/src_raw.h.html', 436, 420 ]
+105 silly gunzTarPerm extractEntry docs/index.html
+106 silly gunzTarPerm modified mode [ 'docs/index.html', 436, 420 ]
+107 silly gunzTarPerm extractEntry docs/modules/CAN.html
+108 silly gunzTarPerm modified mode [ 'docs/modules/CAN.html', 436, 420 ]
+109 silly gunzTarPerm extractEntry docs/modules/Signals.html
+110 silly gunzTarPerm modified mode [ 'docs/modules/Signals.html', 436, 420 ]
+111 silly gunzTarPerm extractEntry docs/modules/index.html
+112 silly gunzTarPerm modified mode [ 'docs/modules/index.html', 436, 420 ]
+113 silly gunzTarPerm extractEntry samples/package.json
+114 silly gunzTarPerm modified mode [ 'samples/package.json', 436, 420 ]
+115 silly gunzTarPerm extractEntry samples/simulate_node.js
+116 silly gunzTarPerm modified mode [ 'samples/simulate_node.js', 436, 420 ]
+117 silly gunzTarPerm extractEntry samples/can_definition_sample.kcd
+118 silly gunzTarPerm modified mode [ 'samples/can_definition_sample.kcd', 436, 420 ]
+119 silly gunzTarPerm extractEntry src/raw.cc
+120 silly gunzTarPerm modified mode [ 'src/raw.cc', 436, 420 ]
+121 silly gunzTarPerm extractEntry src/raw.h
+122 silly gunzTarPerm modified mode [ 'src/raw.h', 436, 420 ]
+123 silly gunzTarPerm extractEntry src/signals.cc
+124 silly gunzTarPerm modified mode [ 'src/signals.cc', 436, 420 ]
+125 silly gunzTarPerm extractEntry tests/test-raw_basic.js
+126 silly gunzTarPerm modified mode [ 'tests/test-raw_basic.js', 436, 420 ]
+127 silly gunzTarPerm extractEntry tests/test-signal_conversion.js
+128 silly gunzTarPerm modified mode [ 'tests/test-signal_conversion.js', 436, 420 ]
+129 silly gunzTarPerm extractEntry tests/test-signal_generation.js
+130 silly gunzTarPerm modified mode [ 'tests/test-signal_generation.js', 436, 420 ]
+131 silly gunzTarPerm extractEntry tests/samples.kcd
+132 silly gunzTarPerm modified mode [ 'tests/samples.kcd', 436, 420 ]
+133 info preinstall socketcan@2.0.1
+134 verbose unsafe-perm in lifecycle false
+135 info socketcan@2.0.1 Failed to exec preinstall script
+136 verbose unlock done using /home/bmiller/.npm/_locks/socketcan-e61a0d85344e1337.lock for /usr/local/lib/node_modules/socketcan
+137 verbose stack Error: socketcan@2.0.1 preinstall: `node-gyp configure && node-gyp build`
+137 verbose stack Exit status 1
+137 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+137 verbose stack     at EventEmitter.emit (events.js:110:17)
+137 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:14:12)
+137 verbose stack     at ChildProcess.emit (events.js:110:17)
+137 verbose stack     at maybeClose (child_process.js:1015:16)
+137 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+138 verbose pkgid socketcan@2.0.1
+139 verbose cwd /home/bmiller/git/zero-canbus
+140 error Linux 3.13.0-57-generic
+141 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "socketcan"
+142 error node v0.12.2
+143 error npm  v2.7.4
+144 error code ELIFECYCLE
+145 error socketcan@2.0.1 preinstall: `node-gyp configure && node-gyp build`
+145 error Exit status 1
+146 error Failed at the socketcan@2.0.1 preinstall script 'node-gyp configure && node-gyp build'.
+146 error This is most likely a problem with the socketcan package,
+146 error not with npm itself.
+146 error Tell the author that this fails on your system:
+146 error     node-gyp configure && node-gyp build
+146 error You can get their info via:
+146 error     npm owner ls socketcan
+146 error There is likely additional logging output above.
+147 verbose exit [ 1, true ]
+148 verbose unbuild lib/node_modules/socketcan
+149 info preuninstall socketcan@2.0.1
+150 verbose unsafe-perm in lifecycle false
+151 info uninstall socketcan@2.0.1
+152 verbose unbuild rmStuff socketcan@2.0.1 from /usr/local/lib/node_modules
+153 info postuninstall socketcan@2.0.1
+154 silly gentlyRm /usr/local/lib/node_modules/socketcan is being purged from base /usr/local
+155 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/socketcan
+156 silly vacuum-fs purging /usr/local/lib/node_modules/socketcan
+157 silly vacuum-fs quitting because other entries in /usr/local/lib/node_modules
