@@ -9,7 +9,16 @@ var channel = new network.RawChannel(
     'can0', 
     false //timestamps
 );
- console.log(zero);
+
+var util = require('util');
+
+console.log(
+    JSON.stringify(
+        zero.bus.dash.messages.odometerFromDash.signals,
+        true
+    )
+);
+
 
 (
     function(){

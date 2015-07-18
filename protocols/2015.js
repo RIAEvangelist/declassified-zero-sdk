@@ -157,44 +157,44 @@ Create Controller message data
 //tpdo message data
 bus=network.bus.controller.messages;
 message=bus.speedTorque.signals;
-message.targetId=new Signal(16,0,0,65535);
-message.targetIq=new Signal(16,2,0,65535);
-message.Id=new Signal(16,4,0,65535);
-message.Iq=new Signal(16,6,0,65535);
+message.targetId=new Signal(16,0);
+message.targetIq=new Signal(16,2);
+message.Id=new Signal(16,4);
+message.Iq=new Signal(16,6);
 
 message=bus.rpmThrottleMotTemp.signals;
-message.velocity=new Signal(32,0,0,4294967295);
-message.throttleInputVoltage=new Signal(16,4,0,65535);
-message.motorTemp=new Signal(16,6,0,65535);
+message.velocity=new Signal(32,0);
+message.throttleInputVoltage=new Signal(16,4);
+message.motorTemp=new Signal(16,6);
 
 message=bus.controllerTempDigitalIn18.signals;
-message.batteryVoltage=new Signal(16,0,0,65535);
-message.controllerHeatsinkTemp=new Signal(8,2,0,255);
-message.batteryCurrent=new Signal(16,3,0,65535);
-message.capacitorVoltage=new Signal(16,5,0,65535);
-message.digitalInputs18=new Signal(8,7,0,255);
+message.batteryVoltage=new Signal(16,0);
+message.controllerHeatsinkTemp=new Signal(8,2);
+message.batteryCurrent=new Signal(16,3);
+message.capacitorVoltage=new Signal(16,5);
+message.digitalInputs18=new Signal(8,7);
 
 message=bus.voltModInductanceTempEst.signals;
-message.voltageModullation=new Signal(16,0,0,65535);
-message.measuredInductance=new Signal(16,2,0,65535);
-message.Ud=new Signal(16,4,0,65535);
-message.Uq=new Signal(16,6,0,65535);
+message.voltageModullation=new Signal(16,0);
+message.measuredInductance=new Signal(16,2);
+message.Ud=new Signal(16,4);
+message.Uq=new Signal(16,6);
 
 message=bus.targetVelMaxIQContVolt.signals;
-message.economyValue=new Signal(16,0,0,65535);
-message.maxBatteryDischargeCurrent=new Signal(16,2,0,65535);
-message.maxIQAllowed=new Signal(16,4,0,65535);
-message.lineContactorCoilVoltage=new Signal(16,6,0,65535);
+message.economyValue=new Signal(16,0);
+message.maxBatteryDischargeCurrent=new Signal(16,2);
+message.maxIQAllowed=new Signal(16,4);
+message.lineContactorCoilVoltage=new Signal(16,6);
 
 //rpdo message data
 message=bus.driveControl.signals;
-message.maxBatteryChargeCurrent=new Signal(16,0,-32768,32767);
-message.maxBatteryDischargeCurrent=new Signal(16,2,-32768,32767);
-message.economyInputVoltage=new Signal(16,4,0,65535);
-message.driveabilitySelect1Switch=new Signal(1,6,0,1,0,0);
-message.driveabilitySelect2Switch=new Signal(1,6,0,1,0,1);
-message.footbreakSwitch=new Signal(1,6,0,1,0,2);
-message.sportMode=new Signal(1,6,0,1,0,3);
+message.maxBatteryChargeCurrent=new Signal(16,0);
+message.maxBatteryDischargeCurrent=new Signal(16,2);
+message.economyInputVoltage=new Signal(16,4);
+message.driveabilitySelect1Switch=new Signal(1,6);
+message.driveabilitySelect2Switch=new Signal(1,6);
+message.footbreakSwitch=new Signal(1,6,2);
+message.sportMode=new Signal(1,6,3);
 
 /******************************\
 Create BMS message data
@@ -203,30 +203,31 @@ Create BMS message data
 //tpdo message data for BMS
 bus=network.bus.bms.messages;
 message=bus.packStatus.signals;
-message.socPct=new Signal(8,0,0,100,0);
+message.socPct=new Signal(8,0);
 message.bmsStatusCharger=new Signal(16,1);
-message.numChargeCycles=new Signal(16,3,0,65535);
-message.packBalance=new Signal(16,5,0,65535);
-message.numberOfBricks=new Signal(16,7,0,255);
+message.numChargeCycles=new Signal(16,3);
+message.packBalance=new Signal(16,5);
+message.numberOfBricks=new Signal(16,7);
 
 message=bus.packConfig.signals;
-message.packSagAdjustment=new Signal(16,0,0,65535);
-message.packMinTempForDischarge=new Signal(8,2,0,255);
-message.packMinTempForCharge=new Signal(8,3,0,255);
-message.packMinTempForCharge=new Signal(8,4,0,255);
-message.packCapacityAH=new Signal(16,5,0,65535);
-message.modelYear=new Signal(8,7,0,255);
+message.packSagAdjustment=new Signal(16,0);
+message.packMinTempForDischarge=new Signal(8,2);
+message.packMinTempForCharge=new Signal(8,3);
+message.packMinTempForCharge=new Signal(8,4);
+message.packCapacityAH=new Signal(16,5);
+message.modelYear=new Signal(8,7);
 
 message=bus.packStats.signals;
-message.bmsFirmwareRevision=new Signal(8,0,0,255);
-message.bmsBoardRevision=new Signal(8,1,0,255);
-message.runTimeSeconds=new Signal(16,2,0,65535);
-message.totalEnergyUsed=new Signal(32,4,0,4294967295);
+message.bmsFirmwareRevision=new Signal(8,0);
+message.bmsBoardRevision=new Signal(8,1);
+message.runTimeSeconds=new Signal(16,2);
+message.totalEnergyUsed=new Signal(32,4);
   
 message=bus.cellVoltage.signals;
-message.cellIndex=new Signal(8,0,0,255);
-message.cellVoltage=new Signal(16,1,0,65535);
-message.packVoltage=new Signal(32,3,0,4294967295);
+message.value=new format.CellList();
+message.cellIndex=new Signal(8,0);
+message.cellVoltage=new Signal(16,1);
+message.packVoltage=new Signal(32,3);
 
 message=bus.packActiveData.signals;
 
@@ -245,8 +246,8 @@ Create Dash message data
 bus=network.bus.dash.messages;
 message=bus.dashStatus.signals;
 message.statusBits=new Signal(16,0);
-message.hours=new Signal(8,2,0,255);
-message.minutes=new Signal(8,3,0,255);
+message.hours=new Signal(8,2);
+message.minutes=new Signal(8,3);
 
 message=bus.odometerFromDash.signals;
 message.odometer=new Signal(48,0);
