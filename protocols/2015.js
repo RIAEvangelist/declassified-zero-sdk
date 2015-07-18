@@ -42,13 +42,13 @@ nodes.userPort=82;
 /***************\
 Create Buses
 \***************/
-network.bus.controller=new Bus("Sevcon");
-network.bus.bms=new Bus("BMS 1");
-network.bus.bms1=new Bus("BMS 2");
-network.bus.ccu=new Bus("Charge Control");
-network.bus.dash=new Bus("Dash");
-network.bus.calexSDS=new Bus("Calex SDS");
-network.bus.calexXMX=new Bus("Calex XMX");
+network.bus.controller=new Bus('controller');
+network.bus.bms=new Bus('bms');
+network.bus.bms1=new Bus('bms1');
+network.bus.ccu=new Bus('ccu');
+network.bus.dash=new Bus('dash');
+network.bus.calexSDS=new Bus('calexSDS');
+network.bus.calexXMX=new Bus('calexXMX');
 
 /**************************\
 Create Controller messages
