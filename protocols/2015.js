@@ -254,4 +254,5 @@ message.odometer.parser=format.divideSignalBy10;
 
 network._messages=format.mapNetworkBus(network.bus);
 
+Object.preventExtensions(network);
 module.exports=network;
