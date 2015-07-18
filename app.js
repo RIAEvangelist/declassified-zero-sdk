@@ -9,6 +9,7 @@ var channel = new network.RawChannel(
     'can0', 
     false //timestamps
 );
+ console.log(zero);
 
 (
     function(){
