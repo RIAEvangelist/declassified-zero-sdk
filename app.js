@@ -1,6 +1,6 @@
 var network= require('./lib/network.js');
 var zero= require('./protocols/2015.js');
-var cmd = require('cmd');
+var cmd = require('node-cmd');
 
 cmd.run('sudo ip link set can0 up type can bitrate 500000');
 
