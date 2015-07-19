@@ -262,6 +262,101 @@ message.controlBits2=new Signal(8,5);
 message.estimatedChargingCurrentX10=new Signal(16,6);
 
 /******************************\
+Create BMS1 message data
+\******************************/
+
+//tpdo message data for BMS
+bus=network.bus.bms1.messages;
+message=bus.packStatus.signals;
+message.socPct=new Signal(8,0);
+message.bmsStatusCharger=new Signal(16,1);
+message.numChargeCycles=new Signal(16,3);
+message.packBalance=new Signal(16,5);
+message.numberOfBricks=new Signal(16,7);
+
+message=bus.packConfig.signals;
+message.packSagAdjustment=new Signal(16,0);
+message.packMinTempForDischarge=new Signal(8,2);
+message.packMinTempForCharge=new Signal(8,3);
+message.packMinTempForCharge=new Signal(8,4);
+message.packCapacityAH=new Signal(16,5);
+message.modelYear=new Signal(8,7);
+
+message=bus.packStats.signals;
+message.bmsFirmwareRevision=new Signal(8,0);
+message.bmsBoardRevision=new Signal(8,1);
+message.runTimeSeconds=new Signal(16,2);
+message.totalEnergyUsed=new Signal(32,4);
+
+message=bus.cellVoltage.signals;
+bus.cellVoltage.value=new format.CellList();
+message.cellIndex=new Signal(8,0);
+message.cellIndex.parser=format.cellIndex;
+message.cellVoltage=new Signal(16,1);
+message.cellIndex.parser=format.cellVoltage;
+message.packVoltage=new Signal(32,3);
+
+message=bus.packActiveData.signals;
+message.highestPackTempC=new Signal(8,1);
+message.lowestPackTempC=new Signal(8,2);
+message.packDischargeCurrentAmps=new Signal(16,3);
+message.packCapacityRemainingAH=new Signal(16,5);
+message.allowedCurrentPercent0255=new Signal(8,7);
+
+message=bus.packTempData.signals;
+/* need to handle like cell voltage
+message.tempSensorIndex=new Signal(8,0);
+message.tempValueC=new Signal(8,1);
+message.isolationResistanceKOhms=new Signal(16,2);
+message.cellWithLowestIsolation=new Signal(8,4);
+message.tempSensorStatus=new Signal(8,5);
+message.lowestRawCell=new Signal(16,6);
+*/
+message=bus.packTime.signals;
+message.bmsTime=new Signal(32,0);
+message.maxChargeCRateX10=new Signal(16,4);
+message.maxDischargeCRateX10=new Signal(16,6);
+
+//tpdo message data for BMS
+message=bus.control.signals;
+message.destinationNodeID=new Signal(8,0);
+message.controlBits1=new Signal(16,1);
+message.numberOfModulesInSystem=new Signal(8,3);
+message.mbbModelYear=new Signal(8,4);
+message.controlBits2=new Signal(8,5);
+message.estimatedChargingCurrentX10=new Signal(16,6);
+
+/******************************\
+Create CCU message data
+\******************************/
+
+//tpdo message data
+bus=network.bus.ccu.messages;
+message=bus.chargeStatus.signals;
+message.statusBits=new Signal(16,0);
+message.chargeVoltage=new Signal(32,2);
+message.chargeCurrent=new Signal(16,6);
+
+message=bus.chargeStatus.signals;
+message.maxChargeVoltage=new Signal(32,0);
+message.maxChargeCurrent=new Signal(16,4);
+
+//rpdo message data
+message=bus.chargeControl.signals;
+message.destinationNodeID=new Signal(8,0);
+message.controlBits=new Signal(16,1);
+message.packVoltage=new Signal(32,3);
+
+message=bus.maxChargeVoltageCurrent.signals;
+message.destinationNodeID=new Signal(8,0);
+message.maxChargeVoltage=new Signal(32,1);
+message.maxChargeCurrent=new Signal(16,5);
+
+message=bus.taperCutOffCurrent.signals;
+message.destinationNodeID=new Signal(8,0);
+message.taperCutOffCurrent=new Signal(16,1);
+
+/******************************\
 Create Dash message data
 \******************************/
 
