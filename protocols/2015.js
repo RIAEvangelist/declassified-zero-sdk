@@ -77,6 +77,9 @@ bus.packActiveData=new Message(0x408);
 bus.packTempData=new Message(0x488);
 bus.packTime=new Message(0x508);
 
+//rpdos for bms 0
+bus.control=new Message(0x506);
+
 //tpdos for bms 1
 bus=network.bus.bms1.messages;
 bus.packStatus=new Message(0x189);
@@ -86,9 +89,6 @@ bus.cellVoltage=new Message(0x389);
 bus.packActiveData=new Message(0x409);
 bus.packTempData=new Message(0x489);
 bus.packTime=new Message(0x509);
-
-//rpdos for bms 0
-bus.control=new Message(0x506);
 
 //rpdos for bms 1
 bus.control=new Message(0x506);
