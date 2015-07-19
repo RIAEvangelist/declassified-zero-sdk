@@ -13,16 +13,8 @@ var channel = new network.RawChannel(
 
 var util = require('util');
 
-console.log(
-    util.inspect(
-        zero.bus,
-        false,
-        100,
-        true
-    )
-);
 
-
+//just bind a listener to all signals.
 (
     function(){
         var busses=Object.keys(zero.bus);
@@ -42,10 +34,6 @@ console.log(
                         showSignalChange
                     );
                 }
-                message.on(
-                    signals[i],
-                    showSignalChange
-                );
             }
         }
     }

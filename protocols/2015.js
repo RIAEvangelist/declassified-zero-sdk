@@ -226,17 +226,40 @@ message.totalEnergyUsed=new Signal(32,4);
 message=bus.cellVoltage.signals;
 bus.cellVoltage.value=new format.CellList();
 message.cellIndex=new Signal(8,0);
+message.cellIndex.parser=format.cellIndex;
 message.cellVoltage=new Signal(16,1);
+message.cellIndex.parser=format.cellVoltage;
 message.packVoltage=new Signal(32,3);
 
 message=bus.packActiveData.signals;
-
+message.highestPackTempC=new Signal(8,1);
+message.lowestPackTempC=new Signal(8,2);
+message.packDischargeCurrentAmps=new Signal(16,3);
+message.packCapacityRemainingAH=new Signal(16,5);
+message.allowedCurrentPercent0255=new Signal(8,7);
 
 message=bus.packTempData.signals;
-
-
+/* need to handle like cell voltage
+message.tempSensorIndex=new Signal(8,0);
+message.tempValueC=new Signal(8,1);
+message.isolationResistanceKOhms=new Signal(16,2);
+message.cellWithLowestIsolation=new Signal(8,4);
+message.tempSensorStatus=new Signal(8,5);
+message.lowestRawCell=new Signal(16,6);
+*/
 message=bus.packTime.signals;
+message.bmsTime=new Signal(32,0);
+message.maxChargeCRateX10=new Signal(16,4);
+message.maxDischargeCRateX10=new Signal(16,6);
 
+//tpdo message data for BMS
+message=bus.control.signals;
+message.destinationNodeID=new Signal(8,0);
+message.controlBits1=new Signal(16,1);
+message.numberOfModulesInSystem=new Signal(8,3);
+message.mbbModelYear=new Signal(8,4);
+message.controlBits2=new Signal(8,5);
+message.estimatedChargingCurrentX10=new Signal(16,6);
 
 /******************************\
 Create Dash message data
@@ -253,7 +276,11 @@ message=bus.odometerFromDash.signals;
 message.odometer=new Signal(48,0);
 message.odometer.parser=format.divideSignalBy10;
 
-network._messages=format.network(network.bus);
+/********************************************\
+Finalize network
+\********************************************/
 
+network._messages=format.network(network.bus);
 Object.preventExtensions(network);
+
 module.exports=network;
