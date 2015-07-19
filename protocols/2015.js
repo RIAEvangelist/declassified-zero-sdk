@@ -357,6 +357,66 @@ message.destinationNodeID=new Signal(8,0);
 message.taperCutOffCurrent=new Signal(16,1);
 
 /******************************\
+Calex SDS message data
+\******************************/
+
+//tpdo message data
+bus=network.bus.calexSDS.messages;
+message=bus.chargeStatus.signals;
+message.statusBits=new Signal(16,0);
+message.chargeVoltage=new Signal(32,2);
+message.chargeCurrent=new Signal(16,6);
+
+message=bus.chargeStatus.signals;
+message.maxChargeVoltage=new Signal(32,0);
+message.maxChargeCurrent=new Signal(16,4);
+
+//rpdo message data
+message=bus.chargeControl.signals;
+message.destinationNodeID=new Signal(8,0);
+message.controlBits=new Signal(16,1);
+message.packVoltage=new Signal(32,3);
+
+message=bus.maxChargeVoltageCurrent.signals;
+message.destinationNodeID=new Signal(8,0);
+message.maxChargeVoltage=new Signal(32,1);
+message.maxChargeCurrent=new Signal(16,5);
+
+message=bus.taperCutOffCurrent.signals;
+message.destinationNodeID=new Signal(8,0);
+message.taperCutOffCurrent=new Signal(16,1);
+
+/******************************\
+Calex SDS message data
+\******************************/
+
+//tpdo message data
+bus=network.bus.calexXMX.messages;
+message=bus.chargeStatus.signals;
+message.statusBits=new Signal(16,0);
+message.chargeVoltage=new Signal(32,2);
+message.chargeCurrent=new Signal(16,6);
+
+message=bus.chargeStatus.signals;
+message.maxChargeVoltage=new Signal(32,0);
+message.maxChargeCurrent=new Signal(16,4);
+
+//rpdo message data
+message=bus.chargeControl.signals;
+message.destinationNodeID=new Signal(8,0);
+message.controlBits=new Signal(16,1);
+message.packVoltage=new Signal(32,3);
+
+message=bus.maxChargeVoltageCurrent.signals;
+message.destinationNodeID=new Signal(8,0);
+message.maxChargeVoltage=new Signal(32,1);
+message.maxChargeCurrent=new Signal(16,5);
+
+message=bus.taperCutOffCurrent.signals;
+message.destinationNodeID=new Signal(8,0);
+message.taperCutOffCurrent=new Signal(16,1);
+
+/******************************\
 Create Dash message data
 \******************************/
 
