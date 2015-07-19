@@ -1,5 +1,6 @@
 var network= require('./lib/network.js');
 var zero= require('./protocols/2015.js');
+var util = require('util');
 //sudo ip link set can0 up type can bitrate 500000
 console.log(
     'Ready'
@@ -13,8 +14,10 @@ var channel = new network.RawChannel(
 var util = require('util');
 
 console.log(
-    JSON.stringify(
-        zero.bus.dash.messages.odometerFromDash.signals,
+    util.inspect(
+        zero.bus,
+        false,
+        100,
         true
     )
 );

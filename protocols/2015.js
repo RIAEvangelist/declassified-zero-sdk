@@ -224,7 +224,7 @@ message.runTimeSeconds=new Signal(16,2);
 message.totalEnergyUsed=new Signal(32,4);
   
 message=bus.cellVoltage.signals;
-message.value=new format.CellList();
+bus.cellVoltage.value=new format.CellList();
 message.cellIndex=new Signal(8,0);
 message.cellVoltage=new Signal(16,1);
 message.packVoltage=new Signal(32,3);
