@@ -1,7 +1,11 @@
 var network= require('./lib/network.js');
 var zero= require('./protocols/2015.js');
-var util = require('util');
-//sudo ip link set can0 up type can bitrate 500000
+var cmd = require('cmd');
+//
+
+
+cmd.run('sudo ip link set can0 up type can bitrate 500000');
+
 console.log(
     'Ready'
 );
@@ -10,9 +14,6 @@ var channel = new network.RawChannel(
     'can0', 
     false //timestamps
 );
-
-var util = require('util');
-
 
 //just bind a listener to all signals.
 (

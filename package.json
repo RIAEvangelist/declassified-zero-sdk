@@ -1,24 +1,25 @@
 {
-    "name": "zero-canbus",
-    "version": "0.0.1",
-    "description": "Zero Motorcycle Can Communication Application",
-    "main": "app.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "zero",
-        "motorcycle",
-        "can",
-        "canbus",
-        "diagnostics",
-        "programming",
-        "interface"
-    ],
-    "author": "Brandon Nozaki Miller",
-    "license": "You may not use this without permission",
-    "dependencies": {
-        "socketcan": "^2.0.1",
-        "event-pubsub": "^1.0.3"
-    }
+  "name": "zero-canbus",
+  "version": "0.0.1",
+  "description": "Zero Motorcycle Can Communication Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zero",
+    "motorcycle",
+    "can",
+    "canbus",
+    "diagnostics",
+    "programming",
+    "interface"
+  ],
+  "author": "Brandon Nozaki Miller",
+  "license": "You may not use this without permission",
+  "dependencies": {
+    "event-pubsub": "^1.0.3",
+    "node-cmd": "^1.0.2",
+    "socketcan": "^2.0.1"
+  }
 }
