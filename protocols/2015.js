@@ -228,7 +228,7 @@ bus.cellVoltage.value=new format.CellList();
 message.cellIndex=new Signal(8,0);
 message.cellIndex.parser=format.cellIndex;
 message.cellVoltage=new Signal(16,1);
-message.cellIndex.parser=format.cellVoltage;
+message.cellVoltage.parser=format.cellVoltage;
 message.packVoltage=new Signal(32,3);
 
 message=bus.packActiveData.signals;
@@ -293,7 +293,7 @@ bus.cellVoltage.value=new format.CellList();
 message.cellIndex=new Signal(8,0);
 message.cellIndex.parser=format.cellIndex;
 message.cellVoltage=new Signal(16,1);
-message.cellIndex.parser=format.cellVoltage;
+message.cellVoltage.parser=format.cellVoltage;
 message.packVoltage=new Signal(32,3);
 
 message=bus.packActiveData.signals;

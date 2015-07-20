@@ -8,6 +8,9 @@ console.log(
     'Ready'
 );
 
+console.log('@todo signals dont have message key')
+console.log('@todo cell voltage parser is choking because messages coming too quick. Index is changin ahead of voltage value being parsed');
+
 var channel = new network.RawChannel(
     'can0', 
     false //timestamps
@@ -38,6 +41,11 @@ var channel = new network.RawChannel(
     }
 )()
 
+zero.bus.controller.messages.rpmThrottleMotTemp.on(
+    'throttleInputVoltage',
+    showSignalChange
+);
+
 function showSignalChange(data){
     console.log(data);
 }
@@ -55,12 +63,7 @@ channel.addListener(
         
         //test just first for now
         var message=zero.bus[info[0].bus].messages[info[0].message];
-        
-        if(Object.keys(message.signals).length<1){
-            //skip because not yet completed
-            return;
-        }
-        
+
         message.trigger(
             'set',
             data.data
