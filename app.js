@@ -1,6 +1,7 @@
 var network= require('./lib/network.js');
 var zero= require('./protocols/2015.js');
 var cmd = require('node-cmd');
+var util = require('util');
 
 cmd.run('sudo ip link set can0 up type can bitrate 500000');
 
@@ -41,13 +42,21 @@ var channel = new network.RawChannel(
     }
 )()
 
+/*
 zero.bus.controller.messages.rpmThrottleMotTemp.on(
     'throttleInputVoltage',
     showSignalChange
 );
+*/
 
 function showSignalChange(data){
-    console.log(data);
+    console.log(
+        util.inspect(
+            data,
+            true,
+            6
+        )
+    );
 }
 
 // set any signals which are defined
