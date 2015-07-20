@@ -222,7 +222,7 @@ message.bmsFirmwareRevision=new Signal(8,0);
 message.bmsBoardRevision=new Signal(8,1);
 message.runTimeSeconds=new Signal(16,2);
 message.totalEnergyUsed=new Signal(32,4);
-  
+
 message=bus.cellVoltage.signals;
 bus.cellVoltage.value=new format.CellList();
 message.cellIndex=new Signal(8,0);

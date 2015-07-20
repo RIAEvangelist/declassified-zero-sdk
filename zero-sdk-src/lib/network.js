@@ -31,7 +31,7 @@ function Network(){
             }
         }
     );
-    
+
     Object.preventExtensions(this);
 }
 
@@ -55,7 +55,7 @@ function Bus(id){
             }
         }
     );
-    
+
     Object.preventExtensions(this);
 }
 
@@ -104,9 +104,9 @@ function Message(id){
             }
         }
     );
-    
+
     Object.preventExtensions(this);
-    
+
     this.on(
         'set',
         updateSignals
@@ -117,7 +117,7 @@ function Message(id){
  * Creates a new signal in a can message
  * @param {Number} bitTotal   bit size of the signal
  * @param {Number} offsetBytes byte offset
- * @param {Number} bit    bit position to get and set from the byte 
+ * @param {Number} bit    bit position to get and set from the byte
  */
 function Signal(bitTotal,offsetBytes,bit){
     Object.defineProperties(
@@ -170,7 +170,7 @@ function Signal(bitTotal,offsetBytes,bit){
             }
         }
     );
-    
+
     Object.preventExtensions(this);
 }
 
@@ -231,27 +231,27 @@ function updateSignals(data){
         var signalName=signalsList[i];
         var signal=channels[signalName];
         var newValue=false;
-        
+
         newValue=signal.parser(
             signals.decode_signal(
-                data, 
+                data,
                 signal.offset,
-                signal.width, 
-                signal.endianess == 'little', 
+                signal.width,
+                signal.endianess == 'little',
                 signal.type == 'signed'
             )
         );
-        
+
         if(signal.value==newValue){
             newValue=false;
         }
-        
+
         if(newValue===false){
             continue;
         }
-        
+
         signal.value=newValue;
-        
+
         this.trigger(
             signalName,
             signal

@@ -13,7 +13,7 @@ console.log('@todo signals dont have message key')
 console.log('@todo cell voltage parser is choking because messages coming too quick. Index is changin ahead of voltage value being parsed');
 
 var channel = new network.RawChannel(
-    'can0', 
+    'can0',
     false //timestamps
 );
 
@@ -61,15 +61,15 @@ function showSignalChange(data){
 
 // set any signals which are defined
 channel.addListener(
-    "onMessage", 
-    function(data) { 
+    "onMessage",
+    function(data) {
         var info=zero._messages[data.id];
-        
+
         if(!info){
             //console.log('unknown message',data.id);
             return;
         }
-        
+
         //test just first for now
         var message=zero.bus[info[0].bus].messages[info[0].message];
 
@@ -77,11 +77,11 @@ channel.addListener(
             'set',
             data.data
         );
-    } 
+    }
 );
 
 
-// Reply any message 
+// Reply any message
 //channel.addListener("onMessage", channel.send, channel);
- 
+
 channel.start();

@@ -1,0 +1,13 @@
+{
+    "name"      : "Zero SDK Example",
+    "version"   : "0.0.1",
+    "main"      : "index.html",
+    "webkit": {
+		"plugin": false
+	},
+    "window":{
+        "title"  : "Zero SDK Example",
+        "height" : 700,
+        "width"  : 1000
+    }
+}

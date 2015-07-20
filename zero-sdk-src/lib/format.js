@@ -34,7 +34,7 @@ function network(bus){
             }
         }
     }
-    
+
     return messages;
 }
 
@@ -45,7 +45,7 @@ function messageDispatcher(){
             this.message.signals
         );
     }
-    
+
     this.message.updated=false;
 }
 
